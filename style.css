@@ -63,8 +63,8 @@ main {
   left: 0;
   width: 100%;
   content: "Controls";
-  padding:1rem;
-  border-bottom:1px solid white;
+  padding: 1rem;
+  border-bottom: 1px solid white;
 }
 
 button {
@@ -98,6 +98,9 @@ button {
   background-color: #ff5252;
 }
 
+.info {
+  background-color: #035700;
+}
 @keyframes notify {
   0% {
     top: -25vh;
