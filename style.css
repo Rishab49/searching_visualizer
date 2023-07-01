@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Chilanka", sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 :root {
@@ -16,7 +16,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
 }
 
 main {
@@ -27,27 +26,30 @@ main {
 }
 .numbers_container {
   display: grid;
-  grid-template-columns: repeat(5, 45px);
-  gap: 1rem;
+  grid-template-columns: repeat(10, 25px);
+  gap: 0.5rem;
   flex-wrap: wrap;
   padding: 1rem;
   border: 2px solid white;
   width: fit-content;
+  border-radius: 5px;
 }
 
 .number {
-  height: 45px;
-  width: 45px;
+  height: 25px;
+  width: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid white;
+  font-size: 0.85rem;
+  border-radius: 5px;
 }
 
-.button_container {
+.side_bar {
   position: relative;
   height: 100%;
-  width: fit-content;
+  width: 250px;
   border-left: 1px solid white;
   flex-direction: column;
   display: flex;
@@ -57,25 +59,46 @@ main {
   padding: 1rem;
 }
 
-.button_container::after {
-  position: absolute;
-  top: 0;
-  left: 0;
+.menu,
+.algo_desc {
   width: 100%;
-  content: "Controls";
-  padding: 1rem;
-  border-bottom: 1px solid white;
+  flex: 1;
+  width:100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu form{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap:0.5rem;
+}
+
+fieldset{
+  padding:1rem;
 }
 
 button {
   padding: 1rem;
-  width: 150px;
+  width: 100%;
 }
 
-.search_number {
+input[type="number"] {
   padding: 1rem;
   height: 45px;
-  width: 150px;
+  width: 100%;
   border: 2px solid white;
   border-radius: 5px;
 }

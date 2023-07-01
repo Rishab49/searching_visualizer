@@ -5,20 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./scripts/index.js" type="module"></script>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-        <div class="numbers_container"></div>
+      <div class="numbers_container"></div>
     </main>
-    <div class="button_container">
-      <input type="number" class="search_number" placeholder="Number to search"  />
-      <button type="button" class="randomize_button">Randomize</button>
+    <div class="side_bar">
+      <div class="menu">
+        <h4>MENU</h4>
+        <hr />
+        <input
+          type="number"
+          class="search_number"
+          placeholder="Number to search"
+        />
+        <input
+          type="number"
+          class="array_length"
+          placeholder="length of array"
+        />
+        <button type="button" class="randomize_button">Randomize Array</button>
+        <form>
+          <fieldset>
+            <legend>Choose Algorithm</legend>
+            <label
+              >Linear Search
+              <input type="radio" value="Linear" name="algo" />
+            </label>
+            <label
+              >Binary Search
+              <input type="radio" value="Binary" name="algo" />
+            </label>
+            <label
+              >Ternary Search
+              <input type="radio" value="Ternary" name="algo" />
+            </label>
+          </fieldset>
+        </form>
+        <button type="button" class="run">Run Algo</button>
+      </div>
+      <hr />
+      <div class="algo_desc"></div>
+
+      <!-- <button type="button" class="randomize_button">Randomize</button>
       <button type="button" class="linear_button">Linear Search</button>
       <button type="button" class="binary_button">Binary Search</button>
+      <button type="button" class="ternary_button">Ternary Search</button> -->
     </div>
-    <div class="notification">
-
-    </div>
+    <div class="notification"></div>
   </body>
+  <script src="./scripts/index.js" defer></script>
+  <script src="./scripts/main.js" type="module"></script>
 </html>
