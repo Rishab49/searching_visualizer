@@ -1,5 +1,5 @@
 # Searching Visualizer
-A project created By me to show how searching algorithms work. It is created using HTML, CSS and Javascript and hosted on 
+A project created By me to show how searching algorithms work. It is created using HTML, CSS and Javascript and hosted on https://searching-visualizer-one.vercel.app/
 
 Currently It has only 3 algorithms to visualize
 1. Linear Search
