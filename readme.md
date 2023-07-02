@@ -7,3 +7,5 @@ Currently It has only 3 algorithms to visualize
 3. Ternary Search
 
 you can also look at the working of the project in this video below
+
+[video.webm](https://github.com/Rishab49/searching_visualizer/assets/25582966/a5e349a8-2b65-4b12-8d92-4258cf804d6f)
