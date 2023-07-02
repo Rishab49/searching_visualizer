@@ -57,7 +57,7 @@ async function binarySearch() {
       index >= left && index <= right ? makeActive(index) : makeInactive(index);
     });
 
-    if (left < right) {
+    if (left <= right) {
       let mid = Math.floor(left + (right - left) / 2);
 
       makeActive(mid);
@@ -247,14 +247,14 @@ function setDesc(algo) {
     .querySelectorAll("p")[1].innerText = "space :" + algo_data[algo].space;
 }
 function openSidebar() {
-    sideBar.style.transform = "translateX(0px)";
-    toggleButton.style.transform = "translateX(-250px)";
-    isOpen = true;
+  sideBar.style.transform = "translateX(0px)";
+  toggleButton.style.transform = "translateX(-250px)";
+  isOpen = true;
 }
 function closeSidebar() {
-    sideBar.style.transform = "translateX(250px)";
-    toggleButton.style.transform = "translateX(0px)";
-    isOpen = false;
+  sideBar.style.transform = "translateX(250px)";
+  toggleButton.style.transform = "translateX(0px)";
+  isOpen = false;
 }
 
 toggleButton.addEventListener("click", function () {
@@ -267,7 +267,7 @@ toggleButton.addEventListener("click", function () {
 
 randomButton.addEventListener("click", randomizeNumbers);
 runButton.addEventListener("click", () => {
-  closeSidebar();
+  window.innerWidth <= 768 ? closeSidebar() : null;
   let algo = new FormData(formElement).get("algo");
   switch (algo) {
     case "Linear":
