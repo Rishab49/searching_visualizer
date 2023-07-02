@@ -235,18 +235,52 @@ function notifyInfo(info) {
   }, 1500);
 }
 
+function setDesc(algo) {
+  console.log(descContainer);
+  descContainer.querySelector("h2").innerText = algo_data[algo].heading;
+  descContainer.querySelector("p").innerText = algo_data[algo].body;
+  descContainer
+    .querySelector(".time_and_space")
+    .querySelectorAll("p")[0].innerText = "time : " + algo_data[algo].time;
+  descContainer
+    .querySelector(".time_and_space")
+    .querySelectorAll("p")[1].innerText = "space :" + algo_data[algo].space;
+}
+function openSidebar() {
+    sideBar.style.transform = "translateX(0px)";
+    toggleButton.style.transform = "translateX(-250px)";
+    isOpen = true;
+}
+function closeSidebar() {
+    sideBar.style.transform = "translateX(250px)";
+    toggleButton.style.transform = "translateX(0px)";
+    isOpen = false;
+}
+
+toggleButton.addEventListener("click", function () {
+  if (isOpen) {
+    closeSidebar();
+  } else {
+    openSidebar();
+  }
+});
+
 randomButton.addEventListener("click", randomizeNumbers);
 runButton.addEventListener("click", () => {
+  closeSidebar();
   let algo = new FormData(formElement).get("algo");
   switch (algo) {
     case "Linear":
       linearSearch();
+      setDesc("linear");
       break;
     case "Binary":
       binarySearch();
+      setDesc("binary");
       break;
     case "Ternary":
       ternarySearch();
+      setDesc("ternary");
       break;
   }
 });
